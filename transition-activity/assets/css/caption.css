@@ -1,0 +1,30 @@
+.caption {
+    position: relative;
+    overflow: hidden;
+}
+.caption::before {
+    content: ' ';
+    position: absolute;
+    background: transparent;
+    transition: background .35s ease-out;
+}
+.caption:hover::before {
+    background: rgba(0, 0, 0, 0.2);
+}
+.caption img {
+    display: block;
+    width: 100%;
+    height: auto;
+}
+.caption:hover .overlay {
+    transform: translateY(10%);
+}
+.caption h1 {
+    text-align: left;
+    margin: 0;
+    padding: 0 0 12px;
+    transform: .35s ease-out;
+}
+.caption:hover caption > h1 {
+    transform: translateY(0);
+}
